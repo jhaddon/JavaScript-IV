@@ -33,6 +33,15 @@ class Student extends Person{
         this.newClassName = stuAttrs.className;
         this.newFavSubject = stuAttrs.favSubject
     }
+    listsSubjects(){
+
+    }
+    PRAssignment(){
+        `${student.name} has submitted a PR for ${subject}`
+    }
+    sprintChallenge(){
+        `${student.name} has begun sprint challenge on ${subject}`
+    }
 }
 
 class ProjManager extends Instructor{
@@ -40,6 +49,12 @@ class ProjManager extends Instructor{
         super(pmAttrs);
         this.newGradClassName = pmAttrs.gradClassName;
         this.newFavInstructor = pmAttrs.favInstructor;
+    }
+    standUp(name, channel){
+        `'${this.name} announces to ${this.channel}, @${this.channel} standy times!`
+    }
+    debugsCode(){
+        `'${name} debugs ${student.name}'s code on ${subject}`
     }
 }
 
