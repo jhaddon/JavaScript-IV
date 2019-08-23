@@ -1,5 +1,6 @@
 // CODE here for your Lambda Classes
 
+//Person Class 
 class Person {
     constructor(attributes) {
         this.name = attributes.name;
@@ -12,6 +13,7 @@ class Person {
     }
  }
  
+ //Instructor Class 
  class Instructor extends Person {
     constructor(instructorOptions) {
         super(instructorOptions);
@@ -25,8 +27,9 @@ class Person {
     grade(student,subject) {
         return `${student.name} receives a perfect score on ${subject}`;
     }
- }   
+ }   //Instructor
  
+ //Student Class
  class Student extends Person {
     constructor(studentOptions) {
         super(studentOptions);
@@ -43,8 +46,9 @@ class Person {
     sprintChallenge(student, subject) {
         return `${student.name} has begun spring challenge on ${subject}`;
     }
- }   
+ }   //Student
  
+ //ProjectManager Class 
  class ProjectManager extends Instructor {
     constructor(PmOptions) {
         super(PmOptions);
@@ -57,8 +61,9 @@ class Person {
     debugsCode(name, student, subject) {
         return `${name} debugs ${student}'s code on ${subject}`;
     }
- }
+ }// PM
  
+ // OBJECTS
  const bilbo = new Person ({
     "name": 'Bilbo',
     "age": 56,
@@ -161,7 +166,7 @@ class Person {
  
  console.log(bilbo.name);
  console.log(frodo.speak());
- console.log(legolas.speak());
+ legolas.speak();
  console.log(aragorn.demo('Blockchain'));
  console.log(gimli.grade(gandalf,'JavaScript'));
  console.log(gimli.grade(legolas,'Python'));
